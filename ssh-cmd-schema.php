@@ -14,7 +14,7 @@ if (filter_var($sshSchemeUrl, FILTER_VALIDATE_URL, FILTER_FLAG_HOST_REQUIRED)) {
     fwrite(STDERR, "Invalid URL format: $sshSchemeUrl" . PHP_EOL);
     exit(2);
 }
-var_dump($parsedURL);
+//var_dump($parsedURL);
 
 if ($parsedURL['scheme'] !== strtolower('ssh')) {
     fwrite(STDERR, "This script only supports the ssh schema type." . PHP_EOL);
